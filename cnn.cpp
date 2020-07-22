@@ -12,7 +12,8 @@ class CNN
     		/* Assuming kernel size to be 3x3 */
     		kernel[l] = new float[9];
     		for(int i = 0; i < 9; i++){
-    			kernel[l][i] = 1.0f / 9.0f;
+				int p = i % 2;
+    			kernel[l][i] = p / 4.0f;
 			}
 		}
 	}
